@@ -43,7 +43,7 @@ end
 # create a group for production
 group :production do
 	gem 'postgres', '~> 0.8.1'
-	#gem 'rails_12factor', '0.0.2'
+	gem 'rails_12factor', '0.0.2'
 end
 
 group :test do
