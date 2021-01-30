@@ -7,6 +7,8 @@ ruby '2.7.2'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3', '~> 1.4'
+gem 'sqlite3', '~> 1.4', group: :development
+gem 'pg', '0.18.1', group: :production
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -37,14 +39,13 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
-  gem 'sqlite3', '~> 1.4' # only use sqlite3 for production
+  #gem 'sqlite3', '~> 1.4' # only use sqlite3 for production
 end
 
 # create a group for production
-group :production do
-	gem 'postgres', '~> 0.8.1'
-	gem 'rails_12factor', '0.0.2'
-end
+#group :production do
+#	gem 'postgres', '~> 0.8.1'
+#end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
